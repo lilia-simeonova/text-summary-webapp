@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="page">
+    <form #text ="ngForm" (ngSubmit)="onSubmit(text)">
+      <textarea placeholder="Place your text here" ngModel name="newText"></textarea>
+      <button class="btn">Submit</button> 
+    </form>
+
+    <div class="result">
+       {{ result | async}}</div>
+    </div>
+</div>

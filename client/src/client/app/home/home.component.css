@@ -1,0 +1,95 @@
+:host {
+  display: block;
+  padding: 0 16px;
+  
+
+}
+
+input {
+  width: 250px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 8px;
+}
+form {
+  width: 400px;
+}
+textarea {
+  resize: vertical; 
+  min-height: 300px;
+  max-height: 300px;;
+  max-width: 400px;
+  background:#fff;
+  border-color: none;
+  min-width: 400px;
+  float:left;
+}
+.result {
+   float: left;
+   text-align:left;
+   margin-left:110px;
+   width: 600px;
+   color:#fff;
+}
+.btn {
+ margin-top:10px;
+ text-align:left;
+ float:left;
+}
+.wrapper {
+  text-align: center;
+}
+.page {
+    max-width: 1366px;
+    margin-top: 20px!important;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto;
+}
+div.cursor {
+  display: inline-block;
+  background: #111;
+  margin-left: 1px;
+
+  -webkit-animation: blink 2s linear 0s infinite;
+  -moz-animation: blink 2s linear 0s infinite;
+  -ms-animation: blink 2s linear 0s infinite;
+  -o-animation: blink 2s linear 0s infinite;
+}
+@-webkit-keyframes blink {
+  0%   { background: #fff }
+  47%  { background: #fff }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #fff }
+}
+
+@-moz-keyframes blink {
+  0%   { background: #fff }
+  47%  { background: #fff }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #fff }
+}
+
+@-ms-keyframes blink {
+  0%   { background: #fff }
+  47%  { background: #fff }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #fff }
+}
+
+@-o-keyframes blink {
+  0%   { background: #fff }
+  47%  { background: #fff }
+  50%  { background: #000 }
+  97%  { background: #000 }
+  100% { background: #fff }
+}
