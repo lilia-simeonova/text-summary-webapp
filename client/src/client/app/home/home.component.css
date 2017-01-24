@@ -21,7 +21,7 @@ textarea {
   min-height: 300px;
   max-height: 300px;;
   max-width: 400px;
-  background:#fff;
+  background:#807B78;
   border-color: none;
   min-width: 400px;
   float:left;
@@ -37,7 +37,24 @@ textarea {
  margin-top:10px;
  text-align:left;
  float:left;
+ background:#3F313E;
+ border-width: 0px;
 }
+.btn:focus {
+   margin-top:10px;
+ text-align:left;
+ float:left;
+ background:#3F313E;
+ border-width: 0px;
+}
+.btn:target {
+   margin-top:10px;
+ text-align:left;
+ float:left;
+ background:#3F313E;
+ border-width: 0px;
+}
+
 .wrapper {
   text-align: center;
 }
@@ -92,4 +109,48 @@ div.cursor {
   50%  { background: #000 }
   97%  { background: #000 }
   100% { background: #fff }
+}
+.mouseover {
+  margin-top:10px;
+  height: 40px;
+  padding-top:10px;
+  text-align: center;
+  color:#fff;
+  float: left;
+  width: 100%;
+  background:#3F313E;
+  cursor: pointer;
+
+}
+.numberSentences {
+  width: 50px;
+  float: right;
+  height: 30px;
+  background: #807B78;
+  border:none;
+}
+.numberSentencesDiv {
+  float: left;
+  width: 80%;
+  text-align: left;
+  color:#8f8f8f;
+}
+.resumeSentence {
+  float:left;
+  width: 100%;
+  background: #807B78;
+  border:none;
+  margin-top:5px;
+}
+.checkbox {
+  width: 50px;
+  float: right;
+  margin-right: -10px;
+  background-color: #807B78;
+  height: 30px;
+}
+.section {
+  margin-top:15px;
+  float: left;
+  width: 100%;
 }

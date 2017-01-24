@@ -41,7 +41,6 @@ li {
 }
 
 input {
-  border: 1px solid #106cc8;
   font-size: 14px;
   height: 40px;
   outline: none;
@@ -49,7 +48,6 @@ input {
 }
 
 button {
-  background-color: #106cc8;
   border-style: none;
   color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
@@ -60,6 +58,4 @@ button {
   text-decoration: none;
 }
 
-button:hover {
-  background-color: #28739e;
-}
+

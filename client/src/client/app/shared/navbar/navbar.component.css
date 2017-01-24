@@ -21,3 +21,9 @@ nav a {
 nav a.router-link-active {
   background-color:#1D1A21;
 }
+nav a.router-link-active {
+  color: #fff;
+}
+nav a:hover {
+ color: #fff; 
+}

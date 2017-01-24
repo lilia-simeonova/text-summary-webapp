@@ -6,21 +6,26 @@ module.exports = {
     
     var text = req.body['text'];
     console.log(text);
-    var numberSentences = 5;
-    var summary = summarize.summary(text, numberSentences);
+    
+    var numberSentences;
+    if(text['count']) {
+      numberSentences = text['count'];
+    } else {
+      numberSentences = 3;
+    }
+    var question = text['sentence'];
+    var summary;
+    var text = text['text'];
+    console.log(question);
+    if(question) {
+      summary = summarize.summaryWithQuestion(question, text, numberSentences); 
+    } else {
+      summary = summarize.summary(text, numberSentences);
+      console.log(summary);
+    }
     console.log('---------------------------------------');
     console.log("the summary is:", summary);
     var result = {"result": summary};
     res.send(result);
-    // new User({ name: person.name, age: person.age, email: person.email })
-    //   .save(function (err) {
-    //     if (err) {
-    //       res.status(504);
-    //       res.end(err);
-    //     } else {
-    //       console.log('user saved');
-    //       res.end();
-    //     }
-    //   });
   }
 }

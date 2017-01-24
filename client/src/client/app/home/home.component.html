@@ -1,11 +1,34 @@
 <div class="wrapper">
   <div class="page">
-    <form #text ="ngForm" (ngSubmit)="onSubmit(text)">
-      <textarea placeholder="Place your text here" ngModel name="newText"></textarea>
-      <button class="btn">Submit</button> 
+    <form #text ="ngForm" (ngSubmit) = "onSubmit(text)">
+      <textarea placeholder = "Place your text here" ngModel name = "newText"></textarea>
+      <div class = "mouseover" on-click = "settings()">Additional Settings</div>
+      <div *ngIf="viewsettings">
+        <div class="section">
+          <div class="numberSentencesDiv">Number sentences in final resume:</div>
+          <input type="number" placeholder="3" ngModel name="number" class="numberSentences">
+        </div>
+        <div class="section">
+          <div class="numberSentencesDiv" >Enter sentence as base for the resume:</div>
+          <input class= "resumeSentence" ngModel name="resumeSentence" placeholder = "Resume based on sentence">
+        </div>
+        <!--<div class="section">
+          <div class="numberSentencesDiv" >Check if you want to see the text immediately</div>
+          <input type="checkbox" class="checkbox" ngModel name="fast" value="fast">
+        </div>-->
+      </div>
+
+      <button class = "btn">Submit</button> 
     </form>
 
-    <div class="result">
-       {{ result | async}}</div>
+    <!--<div class="result" *ngIf="!checkbox">
+       {{ result | async}} 
     </div>
+     <div class="result" *ngIf="checkbox">
+       {{ result }}
+    </div>-->
+    <div class="result" >
+       {{ result  | async }}
+    </div>
+  </div>
 </div>
