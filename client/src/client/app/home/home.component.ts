@@ -36,12 +36,21 @@ export class HomeComponent  {
     }
   onSubmit(f: NgForm) {
     var text = f.value['newText'];
-    var count = f.value['number'];
-    var sentence = f.value['resumeSentence']
+    var count: number, sentence: string;
+    if(f.value['number']) {
+      count = f.value['number'];
+    } else {
+      count = 3;
+    }
+    if(f.value['sentence']) {
+      sentence = f.value['sentence'];
+    } else {
+      sentence = '';
+    }
     var info:any = {text: text, count: count, sentence: sentence};
     console.log(f.value['fast']);
     this.checkbox = f.value['fast'];
-      this.summary.send(info)
+    this.summary.send(info)
         .subscribe((res: Response) => { 
           this.result = res;
           console.log(this.result);
