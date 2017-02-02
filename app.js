@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   console.log(req.body);
 })
 
-app.post('/summerize', summarize.action);
+app.post('/summarize', summarize.action);
 
 
 

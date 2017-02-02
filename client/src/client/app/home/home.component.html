@@ -1,12 +1,12 @@
 <div class="wrapper">
   <div class="page">
     <form #text ="ngForm" (ngSubmit) = "onSubmit(text)">
-      <textarea placeholder = "Place your text here" ngModel name = "newText"></textarea>
+      <textarea placeholder = "Place your text here" ngModel name = "newText" autofocus></textarea>
       <div class = "mouseover" on-click = "settings()">Additional Settings</div>
       <div *ngIf="viewsettings">
         <div class="section">
           <div class="numberSentencesDiv">Number sentences in final resume:</div>
-          <input type="number" placeholder="3" ngModel name="number" class="numberSentences">
+          <input type="number" placeholder="3" min="0" ngModel name="number" class="numberSentences">
         </div>
         <div class="section">
           <div class="numberSentencesDiv" >Enter sentence as base for the resume:</div>
@@ -18,7 +18,7 @@
         </div>-->
       </div>
 
-      <button class = "btn">Submit</button> 
+      <button class = "btn" type="submit">Submit</button> 
     </form>
 
     <!--<div class="result" *ngIf="!checkbox">
@@ -28,7 +28,9 @@
        {{ result }}
     </div>-->
     <div class="result" >
-       {{ result  | async }}
+      <h3>Your summary is:</h3>
+       <!--{{ result  | async }}-->
+       {{ result }}
     </div>
   </div>
 </div>

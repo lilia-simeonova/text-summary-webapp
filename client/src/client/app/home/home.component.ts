@@ -45,10 +45,10 @@ export class HomeComponent  {
         .subscribe((res: Response) => { 
           this.result = res;
           console.log(this.result);
-          this.result = Observable
-                  .from(this.result)
-                  .scan((acc, curr)=> acc + curr)
-                  .zip(Observable.interval(20), (x)=> x);      
+          // this.result = Observable
+          //         .from(this.result)
+          //         .scan((acc :any, curr: any)=> acc + curr)
+          //         .zip(Observable.interval(20), (x)=> x);      
       })
   
      

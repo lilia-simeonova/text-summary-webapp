@@ -8,7 +8,7 @@ module.exports = {
     console.log(text);
     
     var numberSentences;
-    if(text['count']) {
+    if(text['count'] >= 0) {
       numberSentences = text['count'];
     } else {
       numberSentences = 3;

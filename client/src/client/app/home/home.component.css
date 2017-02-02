@@ -1,8 +1,7 @@
 :host {
   display: block;
   padding: 0 16px;
-  
-
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 }
 
 input {
@@ -14,24 +13,28 @@ ul {
   padding: 0 0 0 8px;
 }
 form {
-  width: 400px;
+  width: 600px;
 }
 textarea {
   resize: vertical; 
   min-height: 300px;
   max-height: 300px;;
-  max-width: 400px;
-  background:#807B78;
+  width: 600px;
+  background:#CEC8C8;
   border-color: none;
-  min-width: 400px;
   float:left;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif!important; 
 }
 .result {
    float: left;
+   padding:5px;
    text-align:left;
    margin-left:110px;
+   overflow-y:auto;
    width: 600px;
    color:#fff;
+   background-color:#3F313E;
+   max-height: 300px;
 }
 .btn {
  margin-top:10px;
@@ -48,7 +51,7 @@ textarea {
  border-width: 0px;
 }
 .btn:target {
-   margin-top:10px;
+ margin-top:10px;
  text-align:left;
  float:left;
  background:#3F313E;
@@ -153,4 +156,7 @@ div.cursor {
   margin-top:15px;
   float: left;
   width: 100%;
+}
+h3 {
+  margin-top:0px;
 }

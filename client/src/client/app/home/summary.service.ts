@@ -10,14 +10,13 @@ import { Config } from '../shared/index';
 export class SummaryService {
 	constructor(private http: Http) {}
 
-	send(text: string): Observable<Response> {
+	send(text: any): Observable<Response> {
 	    var headers = new Headers();
 	    headers.append('Content-Type', 'application/json');
 	    var body = { text };
-	    return this.http.post('http://localhost:3000' + '/summerize',
+	    return this.http.post('http://summarize.world:3000' + '/summarize',
 	      JSON.stringify(body), { headers })
 	      .map((res: Response) => res.json())
 	      .map((res: any) => res.result)
-	     // .map((res: any) => res.result)
 	}
 }
