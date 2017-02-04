@@ -42,18 +42,17 @@ export class HomeComponent  {
     } else {
       count = 3;
     }
-    if(f.value['sentence']) {
-      sentence = f.value['sentence'];
+    if(f.value['resumeSentence']) {
+      sentence = f.value['resumeSentence'];
     } else {
       sentence = '';
     }
-    var info:any = {text: text, count: count, sentence: sentence};
-    console.log(f.value['fast']);
+    var info: any = {text: text, count: count, sentence: sentence};
     this.checkbox = f.value['fast'];
     this.summary.send(info)
         .subscribe((res: Response) => { 
           this.result = res;
-          console.log(this.result);
+          //console.log(this.result);
           // this.result = Observable
           //         .from(this.result)
           //         .scan((acc :any, curr: any)=> acc + curr)

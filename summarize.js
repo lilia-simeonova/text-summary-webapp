@@ -3,7 +3,7 @@ var summarize = require('text-summary');
 
 module.exports = {
   action: function (req, res) {
-    
+    console.log('lili');
     var text = req.body['text'];
     console.log(text);
     
@@ -18,7 +18,8 @@ module.exports = {
     var text = text['text'];
     console.log(question);
     if(question) {
-      summary = summarize.summaryWithQuestion(question, text, numberSentences); 
+      summary = summarize.summaryWithQuestion(question, text, numberSentences);
+      console.log(summary);
     } else {
       summary = summarize.summary(text, numberSentences);
       console.log(summary);
